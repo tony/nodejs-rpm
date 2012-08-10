@@ -1,6 +1,6 @@
 # NodeJS v0.9.0
 
-Built for CentOS v5.5.
+Built for CentOS v5.x.
 
 * node.js rpm spec: https://github.com/tony/nodejs-rpm
 * node.js source: http://nodejs.org/dist/
@@ -24,7 +24,7 @@ make install
 curl -sR -o /usr/src/redhat/SOURCES/node-v0.9.0.tar.gz http://nodejs.org/dist/v0.9.0/node-v0.9.0.tar.gz
 curl -sR -o /usr/src/redhat/SPECS/nodejs.spec https://raw.github.com/tony/nodejs-rpm/master/nodejs.spec
 rpmbuild -ba /usr/src/redhat/SPECS/nodejs.spec
-yum localinstall --nogpgcheck /usr/src/redhat/RPMS/`arch`/nodejs-v0.9.rpm
+yum localinstall --nogpgcheck /usr/src/redhat/RPMS/`arch`/nodejs-v0.9.0.rpm
 ```
 
 # todo
