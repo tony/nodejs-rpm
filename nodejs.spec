@@ -1,7 +1,7 @@
 %define   _base node
 
 Name:          %{_base}js
-Version:       0.8.5
+Version:       0.9.0
 Release:       1%{?dist}
 Summary:       Node.js is a server-side JavaScript environment that uses an asynchronous event-driven model.
 Packager:      Kazuhisa Hara <kazuhisya@gmail.com>
@@ -33,7 +33,7 @@ make %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-/bin/sed -Ei " s/ queue\.push\('rm -rf ' \+ npmDir\)//g" tools/installer.js
+/usr/local/bin/sed -Ei " s/ queue\.push\('rm -rf ' \+ npmDir\)//g" tools/installer.js
 make install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
